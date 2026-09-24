@@ -1,12 +1,12 @@
 output: flatpak
 flutter: # autoresolve to latest stable release
 
-repo-url:  https://github.com/zathras-de/jrpn_test
-subdir: jrpn16
-
+repo-url:  https://github.com/zathras-de/jrpn_test.git
 app-id: com.jovial.jrpn16
 runtime-version: '25.08'
 command: jrpn16
+subdir: jrpn16
+
 
 
 metainfo-path: app/share/metainfo/com.jovial.jrpn16.metainfo.xml
