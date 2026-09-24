@@ -31,7 +31,7 @@
   <url type="bugtracker">https://github.com/zathras/jrpn/issues</url>
   <url type="vcs-browser">https://github.com/zathras/jrpn</url>
   <update_contact>software@jovial.com</update_contact>
-  <launchable type="desktop-id">com.jovial.jrpn.desktop</launchable>
+  <launchable type="desktop-id">com.jovial.jrpn16.desktop</launchable>
     <branding>
     <color type="primary" scheme_preference="light">#1565c0</color>
     <color type="primary" scheme_preference="dark">#0d1228</color>
