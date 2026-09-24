@@ -7,14 +7,7 @@
   
   <metadata_license>MIT</metadata_license>
   <project_license>GPL-3.0-only</project_license>
-  
-  <supports>
-    <control>pointing</control>
-    <control>keyboard</control>
-    <control>touch</control>
-    <control>tablet</control>
-  </supports>
-  
+
   <description>
     <p>
       Programmer&apos;s calculator that simulates an HP 16C.  It simulates the appearance and behavior of the original, including the seven-segment display, and the little blink you get when entering numbers.  The 16C&apos;s windowing functions are implemented, but can be disabled to allow the display of longer numbers at one time.
@@ -26,8 +19,23 @@
       Do be aware that the 16C is a calculator intended for computer programmers.  If you&apos;re not familiar with hexadecimal or stack-based RPN calculators, this probably isn&apos;t what you&apos;re looking for!
     </p>
   </description>
-  
+
+  <developer id="com.jovial.bill">
+    <name>Bill Foote</name>
+  </developer>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <url type="homepage">https://jrpn.jovial.com</url>
+  <url type="bugtracker">https://github.com/zathras/jrpn/issues</url>
+  <url type="vcs-browser">https://github.com/zathras/jrpn</url>
+  <update_contact>software@jovial.com</update_contact>
   <launchable type="desktop-id">com.jovial.jrpn.desktop</launchable>
+    <branding>
+    <color type="primary" scheme_preference="light">#1565c0</color>
+    <color type="primary" scheme_preference="dark">#0d1228</color>
+  </branding>
+  
   <screenshots>
     <screenshot type="default">
       <image>https://jrpn.jovial.com/screen_shot_16c.png</image>
@@ -39,4 +47,14 @@
       <image>https://jrpn.jovial.com/flathub_screen_shots/jrpn16_3.webp</image>
     </screenshot>
   </screenshots>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+    <control>tablet</control>
+  </supports>
+  <releases>
+    <release version="1.0.0" date="2026-90-24" />
+  </releases>
+  <content_rating type="oars-1.1" />
 </component>
