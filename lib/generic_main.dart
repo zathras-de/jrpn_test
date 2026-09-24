@@ -40,7 +40,7 @@ import 'c/controller.dart';
 import 'm/model.dart';
 import 'v/main_screen.dart';
 
-final canLaunchWindow = !kIsWeb && (Platform.isLinux || Platform.isMacOS);
+final canLaunchWindow = false; // @@ !kIsWeb && (Platform.isLinux || Platform.isMacOS);
 
 const nonWarranty = '''
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR

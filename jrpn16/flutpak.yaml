@@ -1,0 +1,13 @@
+output: flatpak
+flutter: # autoresolve to latest stable release
+#  ref: '3.47.0'
+
+repo-url:  https://github.com/zathras-de/jrpn_test
+subdir: jrpn16
+
+app-id: com.jovial.jrpn16
+runtime-version: '25.08'
+command: jrpn16
+
+finish-args:
+  - --share=network

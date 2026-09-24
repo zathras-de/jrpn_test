@@ -23,7 +23,6 @@ library;
 import 'dart:async';
 import 'dart:io';
 
-import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -44,6 +43,7 @@ class InternalStateWindow extends StatelessWidget {
   InternalStateWindow({super.key});
 
   static Future<void> launch(BuildContext context, Model model) async {
+/*
     final WindowController window = await DesktopMultiWindow.createWindow('');
     await window.setFrame(const Offset(0, 0) & const Size(600, 720));
     await window.center();
@@ -91,28 +91,35 @@ class InternalStateWindow extends StatelessWidget {
 
     observerRef = observer;
     model.internalSnapshot.listeners.addObserver(observerRef);
+*/
   }
 
   static Future<bool> takeControl(List<String> args) async {
+/*
     if (args.length != 3 || args[0] != 'multi_window') {
       return false;
     }
     final isw = InternalStateWindow();
     runApp(isw);
     isw.setupHandler();
+*/
     return true;
   }
 
   void setupHandler() {
+/*
     WidgetsFlutterBinding.ensureInitialized();
     DesktopMultiWindow.setMethodHandler(_handler);
+*/
   }
 
+/*
   Future<void> _handler(MethodCall call, int fromWindowID) async {
     // Could check call.method to ensure it's 'frob', but we only get the
     // one kind of call
     state.value = call.arguments as String;
   }
+*/
 
   @override
   Widget build(BuildContext context) {

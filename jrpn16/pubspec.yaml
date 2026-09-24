@@ -20,6 +20,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   test: ^1.16.5
+  vector_math: ^2.4.0
 
 flutter_icons:
   image_path: assets_16/icon256.png
