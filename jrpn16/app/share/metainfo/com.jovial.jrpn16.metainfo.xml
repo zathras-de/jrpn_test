@@ -25,6 +25,7 @@
   </developer>
   <categories>
     <category>Utility</category>
+    <category>Calculator</category>
   </categories>
   <url type="homepage">https://jrpn.jovial.com</url>
   <url type="bugtracker">https://github.com/zathras/jrpn/issues</url>

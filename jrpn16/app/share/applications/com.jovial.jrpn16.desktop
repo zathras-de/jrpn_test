@@ -1,11 +1,7 @@
 [Desktop Entry]
-Version=1.0
-Type=Application
-
-Name=jrpn16
+Name=JRPN 16C
 Comment=Simulator of the HP 16C programmer's calculator
-Categories=Utility;Calculator;
-
-Icon=com.jovial.jrpn16
 Exec=jrpn16
-Terminal=false
+Icon=com.jovial.jrpn16
+Type=Application
+Categories=Utility;Calculator;
