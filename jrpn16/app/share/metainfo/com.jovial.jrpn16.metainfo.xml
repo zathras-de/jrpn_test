@@ -20,7 +20,7 @@
     </p>
   </description>
 
-  <developer id="com.jovial.bill">
+  <developer id="com.jovial">
     <name>Bill Foote</name>
   </developer>
   <categories>
@@ -55,7 +55,10 @@
     <control>tablet</control>
   </supports>
   <releases>
-    <release version="1.0.0" date="2026-90-24" />
+    <release version="1.0.0" date="2026-09-01" >
+      <description>Initial flatpak release
+      </description>
+    </release>
   </releases>
   <content_rating type="oars-1.1" />
 </component>
