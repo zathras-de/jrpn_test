@@ -20,11 +20,10 @@ packages:
   android_haptics:
     dependency: transitive
     description:
-      path: "dart/android_haptics"
-      ref: master
-      resolved-ref: "46110ba36a8333c0106dfe436ebf4db94ec7cf22"
-      url: "https://github.com/zathras/misc.git"
-    source: git
+      name: android_haptics
+      sha256: "771b8252d4b13e98e159e588a90bb247acd111b17e113f23dbbdf5874b9c7597"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   app_links:
     dependency: transitive
