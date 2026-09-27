@@ -20,4 +20,5 @@ subdir: jrpn16
 #     path: app/share/icons/hicolor/512x512/apps/com.jovial.jrpn16.png
 
 finish-args:
-  - --share=network --socket=session-bus
+  - --share=network 
+  - --socket=session-bus
