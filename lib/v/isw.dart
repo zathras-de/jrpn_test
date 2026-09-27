@@ -95,6 +95,7 @@ class InternalStateWindow extends StatelessWidget {
   }
 
   static Future<bool> takeControl(List<String> args) async {
+    return false;
 /*
     if (args.length != 3 || args[0] != 'multi_window') {
       return false;
@@ -102,8 +103,8 @@ class InternalStateWindow extends StatelessWidget {
     final isw = InternalStateWindow();
     runApp(isw);
     isw.setupHandler();
-*/
     return true;
+*/
   }
 
   void setupHandler() {
