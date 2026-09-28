@@ -18,7 +18,6 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --device=dri
-  - --share=network
 modules:
   - name: jrpn16
     subdir: jrpn16
@@ -45,6 +44,7 @@ modules:
       - install -Dm644 app/share/metainfo/com.jovial.jrpn16.metainfo.xml /app/share/metainfo/com.jovial.jrpn16.metainfo.xml
       - install -Dm644 app/share/applications/com.jovial.jrpn16.desktop /app/share/applications/com.jovial.jrpn16.desktop
       - install -Dm644 app/share/icons/hicolor/256x256/apps/com.jovial.jrpn16.png /app/share/icons/hicolor/256x256/apps/com.jovial.jrpn16.png
+      - install -Dm644 app/share/icons/hicolor/512x512/apps/com.jovial.jrpn16.png /app/share/icons/hicolor/512x512/apps/com.jovial.jrpn16.png
     sources:
       - type: git
         url: https://github.com/zathras-de/jrpn_test.git
