@@ -29,11 +29,6 @@ import 'package:flutter/services.dart';
 
 import '../m/model.dart';
 
-bool _linuxBug = !kIsWeb && Platform.isLinux;
-const _linuxBugText =
-    'NOTE:  On linux, closing this window is likely to exit the calculator.'
-    '  See issue 32.\n\n';
-
 ///
 /// A separate (desktop) window showing the internal state
 ///
@@ -212,7 +207,7 @@ class _TextViewerState extends State<_TextViewer> {
         maxScale: 10,
         boundaryMargin: const EdgeInsets.all(double.infinity),
         child: Text(
-          _linuxBug ? _linuxBugText + text : text,
+          text,
           softWrap: false,
           overflow: TextOverflow.visible,
           style: const TextStyle(
