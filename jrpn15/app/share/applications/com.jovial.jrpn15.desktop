@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=JRPN 15C
+Comment=Simulator of the HP 15C scientific calculator
+Exec=jrpn15
+Icon=com.jovial.jrpn15
+Type=Application
+Categories=Utility;Calculator;
