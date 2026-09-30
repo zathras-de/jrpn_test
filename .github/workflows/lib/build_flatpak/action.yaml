@@ -79,7 +79,10 @@ runs:
       env:
         INPUT_MANIFEST: ${{ inputs.manifest }}
       run: |
-        source "$GITHUB_ACTION_PATH/../../../scripts/flatpak-build.sh"
+        pwd
+        ls -ls
+        ls -ls ..
+        source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         lint_flatpak_manifest "$INPUT_MANIFEST"
 
     - name: Configure GitHub token
