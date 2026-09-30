@@ -7,6 +7,22 @@ on:
     workflow_dispatch:          # Manually
 
 jobs:
+    jrpn16-x86:
+        runs-on: ubuntu-26.04
+        steps:
+            uses: ./.github/workflows/lib/build_flatpak
+            with:
+                calculator:  jrpn16
+                arch: x86_64
+#    jrpn16-arm:
+#        runs-on: ubuntu-26.04-arm
+#        steps:
+#            uses: ./.github/workflows/lib/build_flatpak
+#            with:
+#                calculator:  jrpn16
+#                arch: aarch64
+@@@@
+
     flatpak-build:
         runs-on: ubuntu-latest
         steps:
