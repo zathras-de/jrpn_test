@@ -82,6 +82,8 @@ export_flatpak_bundle() {
   echo "repo is $repo"
   echo "output is $output"
   cd  /home/runner/.local/share/flatpak/repo 
+  pwd
+  ls -lsR
   echo "git branch -a"
   git branch -a
   echo "git tag"
