@@ -81,9 +81,14 @@ export_flatpak_bundle() {
   sh -c 'cd ../../.. ; pwd ; find . -name repo -print'
   echo "repo is $repo"
   echo "output is $output"
+  cd  /home/runner/.local/share/flatpak/repo 
+  echo "git branch -a"
+  git branch -a
+  echo "git tag"
+  exit 666
   flatpak build-bundle -vv \
     --arch="$arch" \
-    /home/runner/.local/share/flatpak/repo/jrpn16 \
+    /home/runner/.local/share/flatpak/repo \
     "$output" \
     "$app_id"
 }
