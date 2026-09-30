@@ -71,9 +71,6 @@ runs:
     - name: Install org.flatpak.Builder
       shell: bash
       run: |
-        pwd
-        ls -ls
-        ls -ls ..
         cd jrpn16
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         install_flatpak_builder
@@ -84,7 +81,11 @@ runs:
         INPUT_MANIFEST: ${{ inputs.manifest }}
       run: |
         cd jrpn16
+        pwd
+        ls -ls
+        ls -ls ..
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
+        echo lint_flatpak_manifest "$INPUT_MANIFEST"
         lint_flatpak_manifest "$INPUT_MANIFEST"
 
     - name: Lint repo
