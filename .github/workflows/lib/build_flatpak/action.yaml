@@ -74,6 +74,7 @@ runs:
         pwd
         ls -ls
         ls -ls ..
+        cd jrpn16
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         install_flatpak_builder
 
@@ -82,12 +83,14 @@ runs:
       env:
         INPUT_MANIFEST: ${{ inputs.manifest }}
       run: |
+        cd jrpn16
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         lint_flatpak_manifest "$INPUT_MANIFEST"
 
     - name: Lint repo
       shell: bash
       run: |
+        cd jrpn16
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         lint_flatpak_repo repo
 
