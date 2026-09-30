@@ -91,11 +91,6 @@ runs:
         cd jrpn16
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         pwd
-        ls -ls
-        cd ..
-        pwd
-        ls -ls
-        find . -name repo
         echo lint_flatpak_repo repo
         lint_flatpak_repo repo
 
