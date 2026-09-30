@@ -76,6 +76,9 @@ export_flatpak_bundle() {
   echo "@@ efb"
   pwd
   find . -name repo -print
+  sh -c 'cd .. ; pwd ; find . -name repo -print'
+  sh -c 'cd ../.. ; pwd ; find . -name repo -print'
+  sh -c 'cd ../../.. ; pwd ; find . -name repo -print'
   echo "repo is $repo"
   echo "output is $output"
   flatpak build-bundle -vv \
