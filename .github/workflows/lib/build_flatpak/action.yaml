@@ -85,6 +85,17 @@ runs:
         echo lint_flatpak_manifest "$INPUT_MANIFEST"
         lint_flatpak_manifest "$INPUT_MANIFEST"
 
+    - name: Build local
+      env:
+        INPUT_MANIFEST: ${{ inputs.manifest }}
+      run: |
+        pwd
+        source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
+        echo build_flatpak_local "$INPUT_MANIFEST"
+        lint_flatpak_manifest "$INPUT_MANIFEST"
+        pwd
+        find . -name repo -print
+
     - name: Lint repo
       shell: bash
       run: |
