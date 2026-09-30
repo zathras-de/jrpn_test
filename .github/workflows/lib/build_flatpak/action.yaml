@@ -99,7 +99,7 @@ runs:
         INPUT_APP_ID: ${{ inputs.app-id }}
       run: |
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
-        export_flatpak_bundle "$META_ARCH" jrpn16/repo "$META_BUNDLE" "$INPUT_APP_ID"
+        export_flatpak_bundle "$META_ARCH" repo "$META_BUNDLE" "$INPUT_APP_ID"
 
     - name: Upload bundle artifact
       id: upload
