@@ -73,6 +73,11 @@ export_flatpak_bundle() {
   local repo="${2:?Usage: export_flatpak_bundle <arch> <repo> <output> <app_id>}"
   local output="${3:?Usage: export_flatpak_bundle <arch> <repo> <output> <app_id>}"
   local app_id="${4:?Usage: export_flatpak_bundle <arch> <repo> <output> <app_id>}"
+  echo "@@ efb"
+  pwd
+  find . -name repo -print
+  echo "repo is $repo"
+  echo "output is $output"
   flatpak build-bundle \
     --arch="$arch" \
     "$repo" \
