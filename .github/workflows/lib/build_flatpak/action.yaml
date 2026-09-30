@@ -80,10 +80,7 @@ runs:
       env:
         INPUT_MANIFEST: ${{ inputs.manifest }}
       run: |
-        cd jrpn16
         pwd
-        ls -ls
-        ls -ls ..
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         echo lint_flatpak_manifest "$INPUT_MANIFEST"
         lint_flatpak_manifest "$INPUT_MANIFEST"
@@ -93,6 +90,9 @@ runs:
       run: |
         cd jrpn16
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
+        pwd
+        ls -ls
+        echo lint_flatpak_repo repo
         lint_flatpak_repo repo
 
     - name: Export bundle
