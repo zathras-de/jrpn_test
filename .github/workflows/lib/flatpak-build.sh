@@ -83,7 +83,7 @@ export_flatpak_bundle() {
   echo "output is $output"
   flatpak build-bundle -vv \
     --arch="$arch" \
-    "$repo" \
+    /home/runner/.local/share/flatpak/repo
     "$output" \
     "$app_id"
 }
