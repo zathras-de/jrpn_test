@@ -11,14 +11,22 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
-            - uses: subosito/flutter-action@v2
+            - name: Set up Dart SDK
+              uses: dart-lang/setup-dart@v1.8.1
               with:
-                  channel: 'stable'
-                  # flutter:version: '3.0.0'
+                sdk: stable
+                # setup-dart registers its problem matcher via a path 
+                # relative to the calling action's directory. Since 
+                # this action is itself a composite action wrapping 
+                # setup-dart, that path resolves to our own directory
+                # instead of setup-dart's, and the matcher file can't be found
+                # (https://github.com/actions/runner/issues/1490). 
+                # Disable it here.
+                problem-matcher: false
             - name: Build JRPN16
               run: |
                 dart pub global activate flutpak
-                ~/.pub-cache/bin/flubpak flutpak.yaml
+                ~/.pub-cache/bin/flutpak flutpak.yaml
                 cd jrpn16
             - uses: ./.github/workflows/lib/build_flatpak.yaml
               with:
