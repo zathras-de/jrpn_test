@@ -33,4 +33,4 @@ jobs:
                 manifest: jrpn16/flatpak/generated/com.jovial.jrpn16.yml
                 app-id: com.jovial.jrpn16
                 arch: x86_64
-                artifact_name: jrpn16_x86_64.flatpak
+                artifact-name: jrpn16_x86_64.flatpak

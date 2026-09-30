@@ -85,27 +85,9 @@ runs:
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         lint_flatpak_manifest "$INPUT_MANIFEST"
 
-    - name: Configure GitHub token
-      if: inputs.github-token != ''
-      shell: bash
-      env:
-        INPUT_GITHUB_TOKEN: ${{ inputs.github-token }}
-      run: |
-        echo "machine github.com login x-access-token password ${INPUT_GITHUB_TOKEN}" >> ~/.netrc
-        chmod 600 ~/.netrc
-
-    - name: Build Flatpak
-      shell: bash
-      env:
-        INPUT_MANIFEST: ${{ inputs.manifest }}
-      run: |
-        source "$GITHUB_ACTION_PATH/../../../scripts/flatpak-build.sh"
-        build_flatpak "$INPUT_MANIFEST"
-
     - name: Lint repo
       shell: bash
       run: |
-        source "$GITHUB_ACTION_PATH/../../../scripts/flatpak-build.sh"
         lint_flatpak_repo repo
 
     - name: Export bundle
