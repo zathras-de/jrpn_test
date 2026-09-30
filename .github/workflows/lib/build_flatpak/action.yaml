@@ -71,7 +71,10 @@ runs:
     - name: Install org.flatpak.Builder
       shell: bash
       run: |
-        source "$GITHUB_ACTION_PATH/../../../scripts/flatpak-build.sh"
+        pwd
+        ls -ls
+        ls -ls ..
+        source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         install_flatpak_builder
 
     - name: Lint manifest
@@ -79,9 +82,6 @@ runs:
       env:
         INPUT_MANIFEST: ${{ inputs.manifest }}
       run: |
-        pwd
-        ls -ls
-        ls -ls ..
         source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         lint_flatpak_manifest "$INPUT_MANIFEST"
 
