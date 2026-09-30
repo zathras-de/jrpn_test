@@ -20,7 +20,7 @@ jobs:
                 dart pub global activate flutpak
                 ~/.pub-cache/bin/flubpak flutpak.yaml
                 cd jrpn16
-            - uses: actions/lib/build_flatpak
+            - uses: ./.github/workflows/lib/build_flatpak.yaml
               with:
                 manifest: jrpn16/flatpak/generated/com.jovial.jrpn16.yml
                 app-id: com.jovial.jrpn16

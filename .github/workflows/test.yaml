@@ -4,9 +4,9 @@
 name:  JRPN Test
 run-name: ${{ github.actor }} JRPN Test
 on:
-    push:
-        paths-ignore:
-            - '**/README.md'
+#    push:
+#        paths-ignore:
+#            - '**/README.md'
     workflow_dispatch:          # Manually
 
 jobs:
