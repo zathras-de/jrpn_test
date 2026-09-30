@@ -88,6 +88,7 @@ runs:
     - name: Lint repo
       shell: bash
       run: |
+        source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         lint_flatpak_repo repo
 
     - name: Export bundle
@@ -97,7 +98,7 @@ runs:
         META_BUNDLE: ${{ steps.meta.outputs.bundle }}
         INPUT_APP_ID: ${{ inputs.app-id }}
       run: |
-        source "$GITHUB_ACTION_PATH/../../../scripts/flatpak-build.sh"
+        source "$GITHUB_ACTION_PATH/../flatpak-build.sh"
         export_flatpak_bundle "$META_ARCH" repo "$META_BUNDLE" "$INPUT_APP_ID"
 
     - name: Upload bundle artifact
