@@ -86,6 +86,7 @@ runs:
         lint_flatpak_manifest "$INPUT_MANIFEST"
 
     - name: Build local
+      shell: bash
       env:
         INPUT_MANIFEST: ${{ inputs.manifest }}
       run: |
