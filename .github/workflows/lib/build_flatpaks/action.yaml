@@ -15,8 +15,8 @@ runs:
     - name: Do what I mean
       shell: bash
       run: |
-        apt-get install appstream
-        apt-get install flatpak
+        sudo apt-get install appstream
+        sudo apt-get install flatpak
         flatpak remote-add --user --if-not-exists flathub \
            https://dl.flathub.org/repo/flathub.flatpakrepo
         flatpak install flathub org.freedesktop.Sdk//26.08
