@@ -14,7 +14,7 @@ runs:
   steps:
     - name: Do what I mean
       shell: bash
-    - run: |
+      run: |
         apt-get install appstream
         apt-get install flatpak
         flatpak remote-add --user --if-not-exists flathub \
