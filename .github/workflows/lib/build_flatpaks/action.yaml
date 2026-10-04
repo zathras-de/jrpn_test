@@ -14,7 +14,7 @@ runs:
       with:
           channel: 'stable'
           # flutter:version: '3.0.0'
-    - o-murphy/flutpak/.github/actions/setup-flutpak@v0.8.6
+    - uses: o-murphy/flutpak/.github/actions/setup-flutpak@v0.8.6
     - run: apt-get install appstream
     - run: apt-get install flatpak
     - run: flatpak remote-add --user --if-not-exists flathub \
