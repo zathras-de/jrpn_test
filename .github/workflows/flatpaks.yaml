@@ -7,13 +7,19 @@ on:
     workflow_dispatch:          # Manually
 
 jobs:
-    jrpn16-x86:
+    jrpn-x86:
         runs-on: ubuntu-26.04
         steps:
             - uses: actions/checkout@v6
+            - uses: subosito/flutter-action@v2
+              with:
+                  channel: 'stable'
+                  # flutter:version: '3.0.0'
+            - uses: o-murphy/flutpak/.github/actions/setup-flutpak@v0.8.6
             - uses: ./.github/workflows/lib/build_flatpaks
               with:
                 arch: x86_64
+                calc: jrpn16
 
 #    jrpn16-arm:
 #        runs-on: ubuntu-26.04-arm
