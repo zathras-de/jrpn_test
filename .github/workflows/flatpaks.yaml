@@ -21,32 +21,4 @@ jobs:
 #            with:
 #                calculator:  jrpn16
 #                arch: aarch64
-@@@@
 
-    flatpak-build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v6
-            - name: Set up Dart SDK
-              uses: dart-lang/setup-dart@v1.8.1
-              with:
-                sdk: stable
-                # setup-dart registers its problem matcher via a path 
-                # relative to the calling action's directory. Since 
-                # this action is itself a composite action wrapping 
-                # setup-dart, that path resolves to our own directory
-                # instead of setup-dart's, and the matcher file can't be found
-                # (https://github.com/actions/runner/issues/1490). 
-                # Disable it here.
-                problem-matcher: false
-            - name: Build JRPN16
-              run: |
-                dart pub global activate flutpak
-                cd jrpn16
-                ~/.pub-cache/bin/flutpak generate flutpak.yaml
-            - uses: ./.github/workflows/lib/build_flatpak
-              with:
-                manifest: jrpn16/flatpak/generated/com.jovial.jrpn16.yml
-                app-id: com.jovial.jrpn16
-                arch: x86_64
-                artifact-name: jrpn16_x86_64.flatpak
