@@ -3,7 +3,7 @@
   <id>com.jovial.jrpn16</id>
   
   <name>jrpn16</name>
-  <summary>Simulator of the HP 16C programmer&apos;s calculator</summary>
+  <summary>HP 16C programmer&apos;s calculator</summary>
   
   <metadata_license>MIT</metadata_license>
   <project_license>GPL-3.0-only</project_license>
