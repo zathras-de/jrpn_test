@@ -1,2 +1,33 @@
 #
 #
+Name:  Build calculators
+description: "Builds jrpn15 and jrpn16 flatpaks for the current architecture"
+
+inputs:
+    arch:
+    description: "Architecture, x86_64 or aarch64"
+ 
+  
+outputs:
+    jrpn16-url:
+    jrpn15-url:
+
+runs:
+    using: composite
+
+
+steps:
+    - uses: actions/checkout@v6
+    - uses: subosito/flutter-action@v2
+      with:
+          channel: 'stable'
+          # flutter:version: '3.0.0'
+    - o-murphy/flutpak/.github/actions/setup-flutpak@v0.8.6
+    - run: apt-get install appstream
+    - run: apt-get install flatpak
+    - run: flatpak remote-add --user --if-not-exists flathub \
+           https://dl.flathub.org/repo/flathub.flatpakrepo
+    - run: flatpak install flathub org.freedesktop.Sdk//26.08
+
+#     - run: flutter pub upgrade
+        
