@@ -8,14 +8,14 @@ inputs:
         description: "Architecture, x86_64 or aarch64"
  
 runs:
+  - uses: subosito/flutter-action@v2
+    with:
+        channel: 'stable'
+        # flutter:version: '3.0.0'
+  - uses: o-murphy/flutpak/.github/actions/setup-flutpak@v0.8.6
   steps:
-    name: Install tools
-    - shell: bash
-    - uses: subosito/flutter-action@v2
-      with:
-          channel: 'stable'
-          # flutter:version: '3.0.0'
-    - uses: o-murphy/flutpak/.github/actions/setup-flutpak@v0.8.6
+    - name: Install tools
+      shell: bash
     - run: |
         apt-get install appstream
         apt-get install flatpak
