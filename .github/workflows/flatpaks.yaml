@@ -10,8 +10,8 @@ jobs:
     jrpn16-x86:
         runs-on: ubuntu-26.04
         steps:
-            uses: ./.github/workflows/lib/build_flatpaks
-            with:
+            - uses: ./.github/workflows/lib/build_flatpaks
+            - with:
                 arch: x86_64
 
 #    jrpn16-arm:
