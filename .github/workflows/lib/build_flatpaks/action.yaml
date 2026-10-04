@@ -7,16 +7,9 @@ inputs:
     arch:
         description: "Architecture, x86_64 or aarch64"
  
-  
-outputs:
-    jrpn16-url:
-    jrpn15-url:
-
 runs:
-    using: composite
-
-
-steps:
+  using: composite
+  steps:
     - uses: subosito/flutter-action@v2
       with:
           channel: 'stable'
