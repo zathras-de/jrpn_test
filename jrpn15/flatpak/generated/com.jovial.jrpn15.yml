@@ -41,6 +41,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/zathras-de/jrpn_test.git
-        tag: 525b532efb7ac0e4b95c45e413f6c560b2561055
-        commit: 525b532efb7ac0e4b95c45e413f6c560b2561055
+        tag: dff07f0471f4fc7a6b3ad163e4ba13a8ad5f78d2
+        commit: dff07f0471f4fc7a6b3ad163e4ba13a8ad5f78d2
       - pubspec-sources.json
