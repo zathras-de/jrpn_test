@@ -9,7 +9,6 @@ on:
 jobs:
     flatpak-jrpn16:
         name: "Flatpak JRPN16"
-        runs-on: ubuntu-latest
         container:
             image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
             options: --privileged
@@ -17,13 +16,14 @@ jobs:
             matrix:
                 variant:
                   - arch: x86_64
-                    runner: ubuntu-24.04
+                    runner: ubuntu-26.04
                   - arch: aarch64
-                    runner: ubuntu-24.04-arm
+                    runner: ubuntu-26.04-arm
         runs-on: ${{ matrix.variant.runner }}
         steps:
         - uses: actions/checkout@v6
         - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
           with:
+              bundle: jrpn16-${{ matrix.variant.arch }}.flatpak
               manifest-path: jrpn16/flatpak/generated/com.jovial.jrpn16.yml
               arch:  ${{ matrix.variant.arch }}
