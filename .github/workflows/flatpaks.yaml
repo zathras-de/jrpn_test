@@ -30,9 +30,6 @@ jobs:
 
     flatpak-jrpn15:
         name: "Flatpak JRPN15"
-        build_dir: flatpak_app_15
-        repo-dir: repo_15
-        state-dir: .flatpak-builder_15
         container:
             image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
             options: --privileged
@@ -48,6 +45,9 @@ jobs:
         - uses: actions/checkout@v6
         - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
           with:
+              build-dir: flatpak_app_15
+              repo-dir: repo_15
+              state-dir: .flatpak-builder_15
               bundle: jrpn15-${{ matrix.variant.arch }}.flatpak
               manifest-path: jrpn15/flatpak/generated/com.jovial.jrpn15.yml
               arch:  ${{ matrix.variant.arch }}
