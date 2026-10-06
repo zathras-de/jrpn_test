@@ -17,6 +17,5 @@ jobs:
         - uses: actions/checkout@v4
         - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
           with:
-              bundle: palette.flatpak
               manifest-path: jrpn16/flatpak/generated/com.jovial.jrpn16.yml
               arch:  x86_64
