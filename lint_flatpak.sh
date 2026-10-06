@@ -2,7 +2,7 @@
 echo $PATH
 cd `dirname $0`
 BASE=`pwd`
-for calc in jrpn16  ; do
+for calc in jrpn16 jrpn15  ; do
     cd $BASE/$calc
     flutpak generate flutpak.yaml
     if [ $? != 0 ] ; then
