@@ -1,0 +1,22 @@
+
+#  See https://github.com/flatpak/flatpak-github-actions
+
+name: Build Flatpaks
+
+on:
+    workflow_dispatch:          # Manually
+
+jobs:
+    flatpak-jrpn16:
+        name: "Flatpak JRPN16"
+        runs-on: ubuntu-latest
+        container:
+            image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
+            options: --privileged
+        steps:
+        - uses: actions/checkout@v4
+        - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+          with:
+              bundle: palette.flatpak
+              manifest-path: jrpn16/flatpak/generated/com.jovial.jrpn16.yml
+              arch:  x86_64
