@@ -13,9 +13,17 @@ jobs:
         container:
             image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
             options: --privileged
+        strategy:
+            matrix:
+                variant:
+                  - arch: x86_64
+                    runner: ubuntu-24.04
+                  - arch: aarch64
+                    runner: ubuntu-24.04-arm
+        runs-on: ${{ matrix.variant.runner }}
         steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v6
         - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
           with:
               manifest-path: jrpn16/flatpak/generated/com.jovial.jrpn16.yml
-              arch:  x86_64
+              arch:  ${{ matrix.variant.arch }}
