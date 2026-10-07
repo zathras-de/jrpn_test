@@ -3,7 +3,7 @@
   <id>com.jovial.jrpn15</id>
   
   <name>jrpn15</name>
-  <summary>Simulator of the HP 15C RPN scientific calculator</summary>
+  <summary>HP 15C RPN Scientific Calculator</summary>
   
   <metadata_license>MIT</metadata_license>
   <project_license>GPL-3.0-only</project_license>
